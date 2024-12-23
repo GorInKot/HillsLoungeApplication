@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- my colors -->
+    <!-- Артемий Лебедев -->
+    <color name="very_light_grey">#CCCCCC</color>
+    <color name="light_grey">#8A8A8A</color>
+    <color name="middle_grey">#5D5D5D</color>
+    <color name="dark_grey">#1F1F1F</color>
+
+    <color name="light_yellow">#FFD254</color>
+    <!-- Артемий Лебедев -->
+    <color name="middle_yellow">#FFCC00</color>
+    <color name="dark_yellow">#BC9600</color>
+
+    <!-- Артемий Лебедев -->
+    <color name="light_black">#333333</color>
+</resources>

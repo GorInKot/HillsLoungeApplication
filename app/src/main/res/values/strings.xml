@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">HillsLoungeApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="hills_lounge_loyalty">Hills Lounge Loyalty</string>
+    <string name="main_fragment_title">Главная</string>
+    <string name="Label_profile">Профиль</string>
+    <string name="settings">Settings</string>
+    <string name="UserImageView">UserImageView</string>
+    <string name="user_name">User name</string>
+    <string name="UserNumber">+79123456789</string>
+    <string name="cashbackLevel">Уровень cashback:</string>
+    <string name="supportText">Support</string>
+    <string name="pushSettings">settings</string>
+    <string name="loyalty">loyalty</string>
+    <string name="aboutApp">AboutApp</string>
+    <string name="login_screen_title">Регистрация\n</string>
+    <string name="username_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button_text">Авторизоваться\n</string>
+    <string name="registration_button_text">Нет аккаунта?</string>
+    <string name="forgot_password_button_text">Забыли пароль?</string>
+    <string name="registration_screen_title">Регистрация</string>
+    <string name="phone_number_hint">Номер телефона</string>
+    <string name="name_hint">Ваше имя</string>
+    <string name="birthdate_hint">Дата рождения</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="register_button_text">Зарегистрироваться</string>
+</resources>
