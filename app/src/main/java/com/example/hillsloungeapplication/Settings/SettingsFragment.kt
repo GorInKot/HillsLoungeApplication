@@ -2,6 +2,7 @@ package com.example.hillsloungeapplication.Settings
 
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Albums
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,9 +11,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
 import com.example.hillsloungeapplication.databinding.FragmentSettingsBinding
 import com.example.hillsloungeapplication.retrofit.AlbumService
-import com.example.hillsloungeapplication.retrofit.RetroftInstance
+import com.example.hillsloungeapplication.retrofit.RetrofitInstance
 
 class SettingsFragment : Fragment() {
+
+    private val TAG: String = "CHECK_RESPONSE"
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
@@ -25,7 +28,7 @@ class SettingsFragment : Fragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val retrofitService = RetroftInstance.getRetrofitInstance().create(AlbumService::class.java)
+        val retrofitService = RetrofitInstance.getRetrofitInstance().create(AlbumService::class.java)
 
         val responseLiveData =
             liveData {
@@ -38,6 +41,7 @@ class SettingsFragment : Fragment() {
             if(albumList != null) {
                 while(albumList.hasNext()) {
                     val albumItem = albumList.next()
+                    Log.d(TAG, "onResponse: ${albumItem.title}")
 
                     val albumTitle = "Album Title: ${albumItem.title} \n"
                     binding.titleTV.append(albumTitle)

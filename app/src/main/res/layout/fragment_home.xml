@@ -220,51 +220,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/diviver"
                 >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/fragment_home_horiz_sv_news_bottom_constraint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/fragment_home_horiz_sv_news_large"
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
-                        android:text="Новый год в Hills Lounge Саларьево"
-                        android:textSize="24sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textAllCaps="false"
-                        android:layout_marginTop="15dp"
-                        app:layout_constraintTop_toTopOf="@id/fragment_home_horiz_sv_news_bottom_constraint"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:gravity="start"/>
-
-                    <TextView
-                        android:id="@+id/fragment_home_news_label_second"
-                        android:layout_width="380dp"
-                        android:layout_height="wrap_content"
-                        android:text="Работаем для Вас 31 декабря с 20:00 до утра!"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="normal"
-                        android:textAllCaps="false"
-                        app:layout_constraintTop_toBottomOf="@+id/fragment_home_horiz_sv_news_large"
-                        app:layout_constraintStart_toStartOf="parent"
-                        />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/_im_702502b5_69ff_4c16_9148_80fedb196c89"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:foregroundGravity="center"
-                        app:layout_constraintTop_toBottomOf="@id/fragment_home_news_label_second"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/homeFragment_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </HorizontalScrollView>
 

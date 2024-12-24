@@ -5,8 +5,8 @@ import retrofit2.http.GET
 
 interface AlbumService {
 
-    @GET("/albums")
-    //@GET("/")
+//    @GET("/albums")
+    @GET("/test_message")
     suspend fun getAlbums():Response<Albums>
 
 }

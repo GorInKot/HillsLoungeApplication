@@ -4,11 +4,10 @@ import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetroftInstance {
+class RetrofitInstance {
 
     companion object {
-        //val mainUrl = "https://jsonplaceholder.typicode.com"
-        val mainUrl = "https://0.0.0.0:1234"
+        val mainUrl = "https://6fc84e6c0c8b045c.mokky.dev"
 
         fun getRetrofitInstance(): Retrofit {
             return Retrofit.Builder()
