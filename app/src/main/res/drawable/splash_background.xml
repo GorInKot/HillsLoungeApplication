@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/middle_grey" />
+    <item
+        android:width="90dp"
+        android:height="90dp"
+        android:left="150dp"
+        android:right="150dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
+            />
+
+<!--        <bitmap-->
+<!--            android:gravity="center"-->
+<!--            android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e" />-->
+    </item>
+</layer-list>

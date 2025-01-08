@@ -27,4 +27,29 @@
     <string name="birthdate_hint">Дата рождения</string>
     <string name="confirm_password_hint">Подтвердите пароль</string>
     <string name="register_button_text">Зарегистрироваться</string>
+    <string name="createAccount">Нет аккаунта?</string>
+    <string name="resetPassword">Забыли пароль?</string>
+    <string name="Enter">Войти</string>
+    <string name="enterPasswordHint">Введите пароль</string>
+    <string name="enterLoginHint">Введите логин</string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="enterNumberHint">Введите номер телефона</string>
+    <string name="enterNameHint">Введите Ваше имя</string>
+    <string name="registrationTitle">Регистрация</string>
+
+    <string-array name="cat_names">
+        <item>Рыжик</item>
+        <item>Барсик</item>
+        <item>Мурзик</item>
+        <item>Мурка</item>
+        <item>Васька</item>
+        <item>Томасина</item>
+        <item>Кристина</item>
+        <item>Пушок</item>
+        <item>Дымка</item>
+        <item>Кузя</item>
+        <item>Китти</item>
+        <item>Масяня</item>
+        <item>Симба</item>
+    </string-array>
 </resources>

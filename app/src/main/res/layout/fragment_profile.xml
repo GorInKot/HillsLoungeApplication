@@ -76,7 +76,7 @@
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:contentDescription="@string/UserImageView"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
                     android:background="@color/dark_yellow"
                     android:layout_gravity="center"
                     app:layout_constraintTop_toTopOf="parent"
@@ -199,6 +199,53 @@
                     android:src="@drawable/baseline_bolt_24"
                     android:layout_weight="1"
                     />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/profileFragment_tv_support"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="Поддержка"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@color/light_grey"-->
+<!--                    android:gravity="center"-->
+<!--                    android:onClick="onClickMeSupport"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/profileFragment_tv_loyaltyInfo"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="О программе лояльности"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@color/light_grey"-->
+<!--                    android:gravity="center"-->
+<!--                    android:onClick="onClickMeLoyaltyInfo"-->
+<!--                    android:layout_marginTop="15dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/profileFragment_tv_pushSettings"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="Настройка уведомлений"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@color/light_grey"-->
+<!--                    android:gravity="center"-->
+<!--                    android:onClick="onClickMePushSettings"-->
+<!--                    android:layout_marginTop="15dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/profileFragment_tv_aboutApp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="О приложении"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:background="@color/light_grey"-->
+<!--                    android:gravity="center"-->
+<!--                    android:onClick="onClickMeAboutApp"-->
+<!--                    android:layout_marginTop="15dp"/>-->
 
             </LinearLayout>
 
