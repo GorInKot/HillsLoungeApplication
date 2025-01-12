@@ -1,6 +1,6 @@
 Mobile Application to my friend
 
-Just a pet-rpoject
+Just a pet-project
 
 Using Single Activity with bottomNavigationView and Fragments.
 Retrofit
