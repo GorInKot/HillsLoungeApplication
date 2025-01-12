@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "187678252411",
+    "project_id": "hlapp-7daf9",
+    "storage_bucket": "hlapp-7daf9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187678252411:android:2f780b1df7088a01b3f1de",
+        "android_client_info": {
+          "package_name": "com.example.hillsloungeapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCCx7gQyyLU5sZdunRlM-kWatBDj7R2m0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,15 +9,13 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="Theme.HillsLoungeApplication" parent="Base.Theme.HillsLoungeApplication" />
-
-    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/middle_yellow</item>
+    <style name="Theme.HillsLoungeApplication.SplashScreen" parent="Base.Theme.HillsLoungeApplication">
+        <!-- фон -->
+        <item name="windowSplashScreenBackground">@color/dark_yellow</item>
+        <!-- изображение -->
         <item name="windowSplashScreenAnimatedIcon">@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e</item>
+        <!-- центр изображения -->
+        <item name="windowSplashScreenAnimationDuration">0</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.HillsLoungeApplication</item>
-    </style>
-
-    <style name="Theme.App.Splash" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e</item>
     </style>
 </resources>

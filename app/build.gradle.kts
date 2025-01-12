@@ -3,6 +3,8 @@ import org.jetbrains.kotlin.psi.stubs.impl.serialize
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
+    //id("com.google.devtools.ksp")
 }
 
 
@@ -45,20 +47,37 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    // room
+    implementation(libs.room.ktx)
+    implementation(libs.room.runtime)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database.ktx)
 
-    implementation ("androidx.fragment:fragment-ktx:1.5.3")
+    annotationProcessor(libs.room.runtime)
+
+    //ksp("androidx.room:room-compiler:2.6.1")
+//    ksp("androidx.room:room-compiler-processing:2.6.1.1")
+//    ksp("androidx.room:room-compiler-processing-testing:2.6.1")
 
 
-    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.core.splashscreen)
 
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    implementation (libs.androidx.fragment.ktx)
+
+
+    implementation(libs.material)
+
+    implementation (libs.glide)
 
     implementation(libs.retrofit)
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+    implementation (libs.retrofit2.converter.gson)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

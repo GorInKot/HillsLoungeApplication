@@ -12,8 +12,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Указываем тему SplashScreen
-        setTheme(R.style.Theme_App_Splash)
-//        setTheme(R.style.Theme_App_Splash)
+        setTheme(R.style.Theme_HillsLoungeApplication_SplashScreen)
 
         // Задержка перед переходом на MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
