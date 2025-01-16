@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/middle_grey"
+    android:background="?android:attr/colorBackground"
     tools:context=".Profile.ProfileFragment">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:id="@+id/profileFragment_LinearLayout_titile_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:text="@string/Label_profile"
                     android:textStyle="bold"
                     android:textSize="28sp"
@@ -52,13 +52,12 @@
 
                 <ImageButton
                     android:id="@+id/fragment_home_imageButton"
-                    android:layout_width="50dp"
+                    android:layout_width="38dp"
                     android:layout_height="50dp"
-                    android:contentDescription="@string/settings"
-                    android:src="@drawable/baseline_bolt_24"
                     android:layout_marginTop="10dp"
-                    android:background="@color/middle_grey"
-                    />
+                    android:background="?android:attr/colorBackground"
+                    android:contentDescription="@string/settings"
+                    android:src="@drawable/exit" />
 
             </LinearLayout>
 
@@ -77,7 +76,7 @@
                     android:layout_height="130dp"
                     android:contentDescription="@string/UserImageView"
                     android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
-                    android:background="@color/dark_yellow"
+                    android:background="?android:attr/colorBackground"
                     android:layout_gravity="center"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"/>
@@ -86,9 +85,9 @@
                     android:id="@+id/profileFragment_userName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_name"
+                    android:text=""
                     android:textSize="28sp"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textAllCaps="false"
                     android:textAlignment="textStart"
                     android:layout_marginStart="15dp"
@@ -100,9 +99,9 @@
                     android:id="@+id/profileFragment_userTelephone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/UserNumber"
+                    android:text=""
                     android:textSize="24sp"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnBackground"
                     android:textAllCaps="false"
                     android:textAlignment="textStart"
                     android:layout_marginStart="15dp"
@@ -117,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cashbackLevel"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnBackground"
                 android:textAllCaps="false"
                 android:textSize="24sp"
                 android:gravity="center"
@@ -134,7 +133,7 @@
                 app:layout_constraintTop_toBottomOf="@id/profileFragment_cashbackLvl_tv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/dark_yellow"
+                android:textColor="?attr/colorOnBackground"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"/>
 
@@ -160,6 +159,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="support:"
+                    android:textSize="20sp"
+                    android:textColor="@color/luxury_light_text_secondary"/>
+
                 <!-- Support -->
                 <ImageButton
                     android:id="@+id/profileFragment_support_imButton"
@@ -169,6 +175,13 @@
                     android:src="@drawable/baseline_bolt_24"
                     android:layout_weight="1"
                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="push settings:"
+                    android:textSize="20sp"
+                    android:textColor="@color/luxury_light_text_secondary"/>
 
                 <!-- push settings -->
                 <ImageButton
@@ -180,6 +193,13 @@
                     android:layout_weight="1"
                     />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="loyalty:"
+                    android:textSize="20sp"
+                    android:textColor="@color/luxury_light_text_secondary"/>
+
                 <!-- Loyalty -->
                 <ImageButton
                     android:id="@+id/profileFragment_loyaltyInfo"
@@ -189,6 +209,13 @@
                     android:src="@drawable/baseline_bolt_24"
                     android:layout_weight="1"
                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="about app:"
+                    android:textSize="20sp"
+                    android:textColor="@color/luxury_light_text_secondary"/>
 
                 <!-- About App -->
                 <ImageButton

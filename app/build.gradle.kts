@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
     //id("com.google.devtools.ksp")
-}
 
+}
 
 android {
     namespace = "com.example.hillsloungeapplication"
@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.hillsloungeapplication"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -34,6 +34,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        dataBinding = true
 
     }
     compileOptions {
@@ -47,6 +48,10 @@ android {
 
 dependencies {
 
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1") // Для генерации кода Glide
+
+    implementation("com.yandex.android:maps.mobile:4.10.1-full")
+
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-analytics")
@@ -59,17 +64,11 @@ dependencies {
 
     annotationProcessor(libs.room.runtime)
 
-    //ksp("androidx.room:room-compiler:2.6.1")
-//    ksp("androidx.room:room-compiler-processing:2.6.1.1")
-//    ksp("androidx.room:room-compiler-processing-testing:2.6.1")
-
-
     implementation(libs.androidx.core.splashscreen)
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     implementation (libs.androidx.fragment.ktx)
-
 
     implementation(libs.material)
 

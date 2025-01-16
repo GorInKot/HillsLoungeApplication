@@ -22,11 +22,9 @@
     <ImageView
         android:id="@+id/RV_imageView"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="100dp"
         android:src="@drawable/_im_702502b5_69ff_4c16_9148_80fedb196c89"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginBottom="15dp"/>
 
 </LinearLayout>
 

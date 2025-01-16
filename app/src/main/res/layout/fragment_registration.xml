@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -10,17 +11,17 @@
         android:layout_height="wrap_content"
         android:text="@string/registrationTitle"
         android:textSize="24sp"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnBackground"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         />
 
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +37,8 @@
         android:hint="Введите имя"
         android:inputType="text"
         android:textSize="22sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
@@ -51,6 +54,8 @@
         android:hint="Введите Ваш email"
         android:inputType="text"
         android:textSize="22sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextName"
@@ -66,6 +71,8 @@
         android:hint="@string/enterNumberHint"
         android:inputType="phone"
         android:textSize="22sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
@@ -81,6 +88,8 @@
         android:hint="@string/enterPasswordHint"
         android:inputType="textPassword"
         android:textSize="22sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextNumber"
@@ -96,6 +105,8 @@
         android:hint="@string/enterPasswordHint"
         android:inputType="textPassword"
         android:textSize="22sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
@@ -107,24 +118,22 @@
     <Button
         android:id="@+id/buttonRegistration"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@color/light_black"
-
-        android:textSize="22sp"
+        android:layout_height="60dp"
+        style="@style/ButtonStyle.HookahBar.Light"
+        android:textSize="20sp"
         android:text="@string/registration"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextConfirmPassword"
         android:layout_marginTop="25dp"
         />
-<!--    android:onClick="onRegistrationClick"-->
 
     <TextView
         android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Есть аккаунт? Войти"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="22sp"
         android:textStyle="normal"
         android:textAllCaps="false"
@@ -133,16 +142,5 @@
         app:layout_constraintTop_toBottomOf="@id/buttonRegistration"
         android:layout_marginTop="30dp"
         />
-
-    <Button
-        android:id="@+id/testButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="getAllUsers"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

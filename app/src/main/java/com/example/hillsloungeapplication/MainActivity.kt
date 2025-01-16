@@ -2,18 +2,17 @@ package com.example.hillsloungeapplication
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.hillsloungeapplication.Home.HomeFragment
 import com.example.hillsloungeapplication.Profile.ProfileFragment
 import com.example.hillsloungeapplication.Settings.SettingsFragment
-import com.example.hillsloungeapplication.auth.registration.RegistrationFragment
 import com.example.hillsloungeapplication.auth.signIn.SignInFragment
 import com.example.hillsloungeapplication.databinding.ActivityMainBinding
+import com.yandex.mapkit.MapKitFactory
+import com.yandex.mapkit.mapview.MapView
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
 
         // Открываем SignInFragment при запуске
         if (savedInstanceState == null) {
@@ -35,14 +35,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.profile -> replaceFragment(ProfileFragment())
                 R.id.home -> replaceFragment(HomeFragment())
+                R.id.profile -> replaceFragment(ProfileFragment())
                 R.id.settings -> replaceFragment(SettingsFragment())
                 else -> { }
             }
             true
         }
+
+//        binding.bottomNavigationView.itemIconTintList = ContextCompat
+//            .getColorStateList(this, R.color.selector_icon)
+//
+//        binding.bottomNavigationView.itemTextColor = ContextCompat
+//            .getColorStateList(this, R.color.selector_text)
     }
+
+
 
     fun hideBottomNavigation() {
         binding.bottomNavigationView.visibility = View.GONE
@@ -73,4 +81,17 @@ class MainActivity : AppCompatActivity() {
             .commit()
         showBottomNavigation() // Показываем BottomNavigationView после авторизации
     }
+
+    override fun onStart() {
+        super.onStart()
+//        MapKitFactory.getInstance().onStart()
+//        mapView.onStart()
+    }
+
+    override fun onStop() {
+//        mapView.onStop()
+//        MapKitFactory.getInstance().onStop()
+        super.onStop()
+    }
 }
+

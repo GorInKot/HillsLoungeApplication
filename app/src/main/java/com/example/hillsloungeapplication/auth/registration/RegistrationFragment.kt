@@ -46,12 +46,6 @@ class RegistrationFragment : Fragment() {
             handleRegistration()
         }
 
-        // Пример использования кнопки testButton (без получения пользователей)
-        binding.testButton.setOnClickListener {
-            Toast.makeText(requireContext(),
-                "Test Button Clicked",
-                Toast.LENGTH_SHORT).show()
-        }
     }
 
     private fun navigateToLogin() {

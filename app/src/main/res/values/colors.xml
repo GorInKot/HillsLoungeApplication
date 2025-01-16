@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Светлая тема -->
+    <color name="luxury_light_background">#FFFFFF</color>
+<!--    <color name="luxury_light_background">#FFFFFF</color>-->
+    <color name="luxury_light_primary">#D4A373</color>
+<!--    <color name="luxury_light_primary">#D4A373</color>-->
+    <color name="luxury_light_secondary">#D4A373</color>
+<!--    <color name="luxury_light_secondary">#FFC107</color>-->
+    <color name="luxury_light_accent1">#8E001C</color>
+<!--    <color name="luxury_light_accent1">#8E001C</color>-->
+    <color name="luxury_light_accent2">#2E7D32</color>
+<!--    <color name="luxury_light_accent2">#2E7D32</color>-->
 
-    <!-- my colors -->
-    <!-- Артемий Лебедев -->
-    <color name="very_light_grey">#CCCCCC</color>
-    <color name="light_grey">#8A8A8A</color>
-    <color name="middle_grey">#5D5D5D</color>
-    <color name="dark_grey">#1F1F1F</color>
+    <color name="luxury_light_text_primary">#4E342E</color>
+<!--    <color name="luxury_light_text_primary">#4E342E</color>-->
+    <color name="luxury_light_text_secondary">#1C1C1C</color>
+<!--    <color name="luxury_light_text_secondary">#1C1C1C</color>-->
 
-    <color name="light_yellow">#FFD254</color>
-    <!-- Артемий Лебедев -->
-    <color name="middle_yellow">#FFCC00</color>
-    <color name="dark_yellow">#BC9600</color>
 
-    <!-- Артемий Лебедев -->
-    <color name="light_black">#333333</color>
+
 </resources>

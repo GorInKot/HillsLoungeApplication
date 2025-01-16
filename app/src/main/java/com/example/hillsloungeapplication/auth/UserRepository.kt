@@ -1,24 +1,31 @@
 package com.example.hillsloungeapplication.auth
 
-import android.util.Log
+import android.service.autofill.UserData
+import com.example.hillsloungeapplication.auth.registration.database.UserProfile
 import com.google.firebase.database.FirebaseDatabase
 
 class UserRepository {
 
     // Получение данных пользователя по UID из Firebase Realtime Database
-    fun getUserName(userId: String, callback: (String?) -> Unit) {
+    fun getUserData(userId: String, callback: (UserProfile?) -> Unit) {
         val database = FirebaseDatabase.getInstance().reference
-        database.child("users").child(userId).child("name").get()
-            .addOnSuccessListener { snapshot ->
-                if (snapshot.exists()) {
-                    val userName = snapshot.getValue(String::class.java)
-                    callback(userName)
+        database.child("users").child(userId).get()
+            .addOnSuccessListener { dataSnapshot ->
+                if (dataSnapshot.exists()) {
+                    val name = dataSnapshot.child("name").getValue(String::class.java)
+                    val phone = dataSnapshot.child("number").getValue(String::class.java)
+                    if (name != null && phone != null) {
+                        callback(UserProfile(name, phone))
+                    } else {
+                        callback(null)
+                    }
                 } else {
-                    callback(null) // Имя пользователя не найдено
+                    callback(null)
                 }
             }
             .addOnFailureListener {
-                callback(null) // Ошибка при запросе
+                callback(null)
             }
     }
+
 }
