@@ -11,9 +11,10 @@ import com.bumptech.glide.Glide
 import com.example.hillsloungeapplication.R
 
 class CustomRecyclerAdapter(
-    private val cards: List<Card>,
+    private var cards: List<Card>,
     private val onCardClick: (Card) -> Unit // Лямбда для обработки кликов
 ) : RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {
+
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val largeTextView: TextView = itemView.findViewById(R.id.id_tv_big_rv_title)
@@ -41,4 +42,10 @@ class CustomRecyclerAdapter(
     }
 
     override fun getItemCount() = cards.size
+
+    // Метод для обновления данных
+    fun updateData(newCards: List<Card>) {
+        cards = newCards // Обновляем список
+        notifyDataSetChanged() // Уведомляем адаптер о необходимости обновить отображение
+    }
 }

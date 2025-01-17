@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.hillsloungeapplication.Home.recyclerView.BigRV.Card
 import com.example.hillsloungeapplication.R
 
 class CustomRecyclerViewAdapter(
-    private val cards: List<Int>):RecyclerView.Adapter<CustomRecyclerViewAdapter.MyViewHolder>() {
+    private var cards: List<Int>):RecyclerView.Adapter<CustomRecyclerViewAdapter.MyViewHolder>() {
 
         class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
             val imageView: ImageView = itemView.findViewById(R.id.SRV_imageView)
@@ -27,5 +28,11 @@ class CustomRecyclerViewAdapter(
     }
 
     override fun getItemCount() = cards.size
+
+    fun updateData(newCards: List<Int>) {
+        cards = newCards // Обновляем список
+        notifyDataSetChanged() // Уведомляем адаптер о необходимости обновить отображение
+    }
+
     }
 
