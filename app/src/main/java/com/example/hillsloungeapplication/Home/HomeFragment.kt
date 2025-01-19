@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hillsloungeapplication.Home.recyclerView.BigRV.Card
 import com.example.hillsloungeapplication.Home.recyclerView.BigRV.CustomRecyclerAdapter
 import com.example.hillsloungeapplication.Home.recyclerView.SmallRV.CustomRecyclerViewAdapter
 import com.example.hillsloungeapplication.MainActivity

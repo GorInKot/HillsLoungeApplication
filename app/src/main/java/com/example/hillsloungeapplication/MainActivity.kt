@@ -4,15 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.hillsloungeapplication.Home.HomeFragment
 import com.example.hillsloungeapplication.Profile.ProfileFragment
-import com.example.hillsloungeapplication.Settings.SettingsFragment
+import com.example.hillsloungeapplication.Places.PlacesFragment
 import com.example.hillsloungeapplication.auth.signIn.SignInFragment
 import com.example.hillsloungeapplication.databinding.ActivityMainBinding
-import com.yandex.mapkit.MapKitFactory
-import com.yandex.mapkit.mapview.MapView
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
-                R.id.settings -> replaceFragment(SettingsFragment())
+                R.id.places -> replaceFragment(PlacesFragment())
                 else -> { }
             }
             true
@@ -67,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
 
         // Показываем BottomNavigationView для фрагментов, где он нужен
-        if (fragment is HomeFragment || fragment is ProfileFragment || fragment is SettingsFragment) {
+        if (fragment is HomeFragment || fragment is ProfileFragment || fragment is PlacesFragment) {
             showBottomNavigation()
         } else {
             hideBottomNavigation()

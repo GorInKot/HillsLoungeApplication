@@ -7,7 +7,7 @@
         />
 
     <item android:title="Заведения"
-        android:id="@+id/settings"
+        android:id="@+id/places"
         android:icon="@drawable/placeholder"
         />
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Places.PlacesFragment">
+
+    <TextView
+        android:id="@+id/tv_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заведения"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_places"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="56dp"
+        android:scrollbars="vertical"/>
+
+
+    <!--    <com.yandex.mapkit.mapview.MapView-->
+<!--        android:id="@+id/mapview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/zoom_buttons"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_gravity="end|bottom"-->
+<!--        android:padding="16dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/zoom_in_button"-->
+<!--            android:layout_width="56dp"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:text="\u002B"-->
+<!--            android:background="@android:drawable/btn_default"-->
+<!--            android:textSize="26sp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:padding="8dp"-->
+<!--            android:textColor="#FFFFFF"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/zoom_out_button"-->
+<!--            android:layout_width="56dp"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:text="\u2212"-->
+<!--            android:background="@android:drawable/btn_default"-->
+<!--            android:textSize="26sp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:padding="8dp"-->
+<!--            android:textColor="#FFFFFF"/>-->
+
+<!--    </LinearLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/titleTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/mapview"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="24sp"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
