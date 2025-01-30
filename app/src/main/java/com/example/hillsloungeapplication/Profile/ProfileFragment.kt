@@ -23,9 +23,7 @@ class ProfileFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var viewModel: ProfileViewModel
 
-    private val userRepository = UserRepository()
     private lateinit var auth: FirebaseAuth
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,83 +34,66 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // Инициализация FirebaseAuth
         auth = FirebaseAuth.getInstance()
 
-        setupListeners()
-        loadUserData()
-
-        binding.fragmentHomeImageButton.setOnClickListener {
-            onLogout()
+        // Наблюдаем за LiveData для обновления UI
+        viewModel.userName.observe(viewLifecycleOwner) { userName ->
+            binding.profileFragmentUserName.text = userName
         }
 
-        return view
+        viewModel.userPhone.observe(viewLifecycleOwner) { userPhone ->
+            binding.profileFragmentUserTelephone.text = userPhone
+        }
 
+        viewModel.isUserLoggedIn.observe(viewLifecycleOwner) { isLoggedIn ->
+            if (!isLoggedIn) {
+                // Если пользователь не авторизован, показываем экран входа
+                onLogout()
+            }
+        }
+
+        setupListeners()
+        viewModel.loadUserData() // Загрузка данных пользователя
+
+        return view
     }
 
     private fun setupListeners() {
-        binding.profileFragmentSupportImButton.setOnClickListener {
+        binding.supportSection.setOnClickListener {
             Toast.makeText(activity, viewModel.toastTextSupport, Toast.LENGTH_SHORT).show()
             Log.d("TAG", "this is log from profileFragment (support pressed)")
         }
 
-        binding.profileFragmentPushSettings.setOnClickListener {
+        binding.settingsPushesSection.setOnClickListener {
             Toast.makeText(activity, viewModel.toastTextPushSettings, Toast.LENGTH_SHORT).show()
             Log.d("TAG", "this is log from profileFragment (pushSettings pressed)")
         }
 
-        binding.profileFragmentLoyaltyInfo.setOnClickListener {
+        binding.loyaltySection.setOnClickListener {
             Toast.makeText(activity, viewModel.toastTextLoyalty, Toast.LENGTH_SHORT).show()
             Log.d("TAG", "this is log from profileFragment (loyaltyInfo pressed)")
         }
 
-        binding.profileFragmentAboutApp.setOnClickListener {
-            Toast.makeText(activity, viewModel.toastTextAboutApp, Toast.LENGTH_SHORT).show()
+        binding.aboutAppSection.setOnClickListener {
             Log.d("TAG", "this is log from profileFragment (aboutApp pressed)")
+            val dialog = AboutAppDialog()
+            dialog.show(parentFragmentManager, "AboutAppDialog")
+        }
+
+        binding.fragmentHomeImageButton.setOnClickListener {
+            viewModel.onLogout(requireContext())
         }
     }
 
-    private fun loadUserData() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            val currentUser = auth.currentUser
-            if (currentUser != null) {
-                val userId = currentUser.uid
-                userRepository.getUserData(userId) { userData ->
-                    if (userData != null) {
-                        // Устанавливаем имя пользователя в TextView
-                        binding.profileFragmentUserName.text = userData.name
-                        binding.profileFragmentUserTelephone.text = userData.phone
-                    } else {
-                        // Показываем сообщение, если имя пользователя не найдено
-                        binding.profileFragmentUserName.text = "Имя пользователя не найдено"
-                    }
-                }
-            } else {
-                // Если пользователь не авторизован
-                binding.profileFragmentUserName.text = "Пользователь не авторизован"
-            }
-        }
-    }
-
-    // Метод для выхода из учетной записи
     private fun onLogout() {
-        // Очистка данных об авторизации (например, флаг или токен)
-        // Тут можно сбросить состояние авторизации (например, SharedPreferences или другую логику)
-        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        // Очистить все данные
-        editor.clear()
-        editor.apply()
-
-        // hide BottomNavigationView
+        // Прячем BottomNavigationView, если нужно
         (activity as? MainActivity)?.hideBottomNavigation()
 
-        // open SignInFragment
+        // Переход к экрану авторизации
         (activity as? MainActivity)?.supportFragmentManager?.beginTransaction()
             ?.replace(R.id.frame_layout, SignInFragment())
             ?.commit()
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

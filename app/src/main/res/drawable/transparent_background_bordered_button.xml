@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Первый слой: Прозрачный фон -->
+    <item android:drawable="@android:color/transparent" />
+
+    <!-- Второй слой: Контур -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:color="@color/mainColor"
+            android:width="2dp" />  <!-- Толщина контура -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</layer-list>
+
+

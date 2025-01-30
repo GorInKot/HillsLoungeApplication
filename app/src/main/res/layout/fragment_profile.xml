@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?android:attr/colorBackground"
+    android:background="@color/background_variant"
     tools:context=".Profile.ProfileFragment">
 
     <ScrollView
@@ -38,7 +38,7 @@
                     android:id="@+id/profileFragment_LinearLayout_titile_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/colorOnBackground"
+                    android:textColor="@color/textColor"
                     android:text="@string/Label_profile"
                     android:textStyle="bold"
                     android:textSize="28sp"
@@ -52,10 +52,11 @@
 
                 <ImageButton
                     android:id="@+id/fragment_home_imageButton"
-                    android:layout_width="38dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:background="?android:attr/colorBackground"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/image_buttons_border"
                     android:contentDescription="@string/settings"
                     android:src="@drawable/exit" />
 
@@ -70,16 +71,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_margin="10dp">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profileFragment_userImg"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:contentDescription="@string/UserImageView"
                     android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
-                    android:background="?android:attr/colorBackground"
                     android:layout_gravity="center"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/mainColor"/>
 
                 <TextView
                     android:id="@+id/profileFragment_userName"
@@ -87,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="28sp"
-                    android:textColor="?attr/colorOnBackground"
+                    android:textColor="@color/accentColor"
                     android:textAllCaps="false"
                     android:textAlignment="textStart"
                     android:layout_marginStart="15dp"
@@ -101,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="24sp"
-                    android:textColor="?attr/colorOnBackground"
+                    android:textColor="@color/textColor"
                     android:textAllCaps="false"
                     android:textAlignment="textStart"
                     android:layout_marginStart="15dp"
@@ -116,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cashbackLevel"
-                android:textColor="?attr/colorOnBackground"
+                android:textColor="@color/accentColor"
                 android:textAllCaps="false"
                 android:textSize="24sp"
                 android:gravity="center"
@@ -133,148 +135,162 @@
                 app:layout_constraintTop_toBottomOf="@id/profileFragment_cashbackLvl_tv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textColor="?attr/colorOnBackground"
+                android:textColor="@color/accentColor"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"/>
 
             <!-- TODO -->
-            <!-- Achieve Box -->
-            <!--            <View-->
-            <!--                android:id="@+id/profileFragment_achiveBox"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="150dp"-->
-            <!--                android:background="@color/dark_yellow"-->
-            <!--                app:layout_constraintTop_toBottomOf="@id/profileFragment_SeeckBar"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                android:layout_marginTop="10dp">-->
-            <!--            </View>-->
-
-            <LinearLayout
-                android:id="@+id/profileFragment_linear_imButtons"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvAchive"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profileFragment_SeeckBar"
+                android:text="Достижения:"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:orientation="vertical">
+                app:layout_constraintTop_toBottomOf="@id/profileFragment_SeeckBar"
+                android:layout_margin="15dp"
+                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                />
+            <View
+                android:id="@+id/profileFragment_achiveBox"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/accentColor"
+                app:layout_constraintTop_toBottomOf="@id/tvAchive"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/support_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileFragment_achiveBox"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/free_icon_problem_6570266"
+                    app:tint="@color/textColor" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="support:"
-                    android:textSize="20sp"
-                    android:textColor="@color/luxury_light_text_secondary"/>
-
-                <!-- Support -->
-                <ImageButton
-                    android:id="@+id/profileFragment_support_imButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/supportText"
-                    android:src="@drawable/baseline_bolt_24"
-                    android:layout_weight="1"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="push settings:"
-                    android:textSize="20sp"
-                    android:textColor="@color/luxury_light_text_secondary"/>
-
-                <!-- push settings -->
-                <ImageButton
-                    android:id="@+id/profileFragment_pushSettings"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/pushSettings"
-                    android:src="@drawable/baseline_bolt_24"
-                    android:layout_weight="1"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="loyalty:"
-                    android:textSize="20sp"
-                    android:textColor="@color/luxury_light_text_secondary"/>
-
-                <!-- Loyalty -->
-                <ImageButton
-                    android:id="@+id/profileFragment_loyaltyInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/loyalty"
-                    android:src="@drawable/baseline_bolt_24"
-                    android:layout_weight="1"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="about app:"
-                    android:textSize="20sp"
-                    android:textColor="@color/luxury_light_text_secondary"/>
-
-                <!-- About App -->
-                <ImageButton
-                    android:id="@+id/profileFragment_aboutApp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/aboutApp"
-                    android:src="@drawable/baseline_bolt_24"
-                    android:layout_weight="1"
-                    />
-
-<!--                <TextView-->
-<!--                    android:id="@+id/profileFragment_tv_support"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:text="Поддержка"-->
-<!--                    android:textSize="24sp"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:background="@color/light_grey"-->
-<!--                    android:gravity="center"-->
-<!--                    android:onClick="onClickMeSupport"/>-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/profileFragment_tv_loyaltyInfo"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:text="О программе лояльности"-->
-<!--                    android:textSize="24sp"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:background="@color/light_grey"-->
-<!--                    android:gravity="center"-->
-<!--                    android:onClick="onClickMeLoyaltyInfo"-->
-<!--                    android:layout_marginTop="15dp"/>-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/profileFragment_tv_pushSettings"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:text="Настройка уведомлений"-->
-<!--                    android:textSize="24sp"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:background="@color/light_grey"-->
-<!--                    android:gravity="center"-->
-<!--                    android:onClick="onClickMePushSettings"-->
-<!--                    android:layout_marginTop="15dp"/>-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/profileFragment_tv_aboutApp"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:text="О приложении"-->
-<!--                    android:textSize="24sp"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:background="@color/light_grey"-->
-<!--                    android:gravity="center"-->
-<!--                    android:onClick="onClickMeAboutApp"-->
-<!--                    android:layout_marginTop="15dp"/>-->
+                    android:text="Поддержка"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingsPushes_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/support_section"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_background">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/free_icon_alarm_6803380"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Настройка уведомлений"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loyalty_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settingsPushes_section"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_background">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/free_icon_star_6583128"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="О программе лояльности"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aboutApp_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loyalty_section"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_background">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/free_icon_info_6583141"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="О приложении"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+
+
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

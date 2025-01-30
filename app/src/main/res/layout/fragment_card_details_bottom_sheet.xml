@@ -10,10 +10,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="?attr/background"
+        android:background="@color/background_variant"
         android:elevation="4dp">
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -29,7 +28,7 @@
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                     tools:text="Title"
                     android:textSize="24sp"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="@color/textColor"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +43,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     android:src="@drawable/close"
                     android:textSize="24sp"
-                    android:background="@android:color/transparent"
+                    android:background="@color/textColor"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -55,10 +54,10 @@
         <ImageView
             android:id="@+id/cardDetailsImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
-            tools:src="@drawable/wfcubjudis72rza2fjhpywblwwu7rtso" />
+            tools:src="@drawable/hills_sal_new" />
 
         <TextView
             android:id="@+id/cardDetailsDescription"
@@ -67,7 +66,7 @@
             android:layout_marginTop="8dp"
             tools:text="Description text"
             android:textSize="20sp"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="@color/accentColor"
             android:textStyle="normal"
             android:textAllCaps="false"/>
 

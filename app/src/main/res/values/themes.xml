@@ -1,29 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.HillsLoungeApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Основные цвета -->
-        <item name="colorPrimary">@color/luxury_light_primary</item>
-        <item name="colorPrimaryVariant">@color/luxury_light_accent1</item>
-        <item name="colorOnPrimary">@color/luxury_light_text_primary</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!-- Фон приложения -->
+        <item name="background">@color/background_variant</item>
 
-        <!-- Цвет фона -->
-        <item name="background">@color/luxury_light_background</item>
-        <item name="colorOnBackground">@color/luxury_light_text_primary</item>
-
-        <!-- Цвета поверхностей -->
-        <item name="colorSurface">@color/luxury_light_secondary</item>
-        <item name="colorOnSurface">@color/luxury_light_text_secondary</item>
-
-        <!-- Вторичные цвета -->
-        <item name="colorSecondary">@color/luxury_light_accent2</item>
-        <item name="colorOnSecondary">@color/luxury_light_text_primary</item>
-
-        <!-- Цвета текста -->
-        <item name="android:textColorPrimary">@color/luxury_light_text_primary</item>
-        <item name="android:textColorSecondary">@color/luxury_light_text_secondary</item>
-
-        <!-- Специфические стили -->
-        <item name="buttonStyle">@style/ButtonStyle.HookahBar.Light</item>
+        <!-- Прочие настройки вашего приложения -->
     </style>
 
     <!-- Стиль кнопок для светлой темы -->
@@ -32,50 +14,19 @@
         <item name="android:textColor">@color/luxury_light_text_primary</item>
     </style>
 
+    <style name="ButtonStyle.HookahBar.Light_Variant" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/luxury_light_primary</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
     <style name="MyTextViewStyle">
         <item name="android:textSize">18sp</item>
     </style>
 
-<!--    <style name="Theme.HillsLoungeApplication.SplashScreen" parent="Base.Theme.HillsLoungeApplication">-->
-<!--        &lt;!&ndash; фон &ndash;&gt;-->
-<!--        <item name="windowSplashScreenBackground">@color/dark_yellow</item>-->
-<!--        &lt;!&ndash; изображение &ndash;&gt;-->
-<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e</item>-->
-<!--        &lt;!&ndash; центр изображения &ndash;&gt;-->
-<!--        <item name="windowSplashScreenAnimationDuration">0</item>-->
-<!--        <item name="postSplashScreenTheme">@style/Base.Theme.HillsLoungeApplication</item>-->
-<!--    </style>-->
+    <!-- Стиль для заставки (Splash Screen) -->
+    <style name="Theme.HillsLoungeApplication.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
 
-    <!-- Светлая тема -->
-    <style name="Theme.HookahBar.Light" parent="Theme.MaterialComponents.DayNight">
-        <!-- Основные цвета -->
-        <item name="colorPrimary">@color/luxury_light_primary</item>
-        <item name="colorPrimaryVariant">@color/luxury_light_accent1</item>
-        <item name="colorOnPrimary">@color/luxury_light_text_primary</item>
-
-        <!-- Цвет фона -->
-        <item name="background">@color/luxury_light_background</item>
-        <item name="colorOnBackground">@color/luxury_light_text_primary</item>
-
-        <!-- Цвета поверхностей -->
-        <item name="colorSurface">@color/luxury_light_secondary</item>
-        <item name="colorOnSurface">@color/luxury_light_text_secondary</item>
-
-        <!-- Вторичные цвета -->
-        <item name="colorSecondary">@color/luxury_light_accent2</item>
-        <item name="colorOnSecondary">@color/luxury_light_text_primary</item>
-
-        <!-- Цвета текста -->
-        <item name="android:textColorPrimary">@color/luxury_light_text_primary</item>
-        <item name="android:textColorSecondary">@color/luxury_light_text_secondary</item>
-
-        <!-- Специфические стили -->
-        <item name="buttonStyle">@style/ButtonStyle.HookahBar.Light</item>
     </style>
 
-    <!-- Стиль кнопок для светлой темы -->
-<!--    <style name="ButtonStyle.HookahBar.Light" parent="Widget.MaterialComponents.Button">-->
-<!--        <item name="backgroundTint">@color/luxury_light_primary</item>-->
-<!--        <item name="android:textColor">@color/luxury_light_text_primary</item>-->
-<!--    </style>-->
 </resources>

@@ -39,10 +39,10 @@ class HomeFragment : Fragment() {
         setupRecyclerViews()
         setupObservers()
 
-        binding.fragmentHomeImageButton.setOnClickListener {
-            viewModel.logout()
-            navigateToSignIn()
-        }
+//        binding.fragmentHomeImageButton.setOnClickListener {
+//            viewModel.logout()
+//            navigateToSignIn()
+//        }
 
         viewModel.startAutoScrollBRV()
         viewModel.startAutoScrollSRV()

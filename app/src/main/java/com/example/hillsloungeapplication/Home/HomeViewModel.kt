@@ -29,17 +29,17 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         _cardsBRV.value = listOf(
             Card("Новогодняя вечеринка в Hills Lounge | Саларьево",
                 "Мы работаем для Вас с 20:00 и до утра!",
-                "https://s0.rbk.ru/v6_top_pics/media/img/4/04/346843326750044.jpg",
+                R.drawable.hills_sal_new,
             ),
 
             Card("Новогодняя вечеринка в Hills Lounge | Румянцево",
                 "Мы работаем для Вас с 20:00 и до утра!",
-                "https://png.pngtree.com/thumb_back/fw800/background/20230612/pngtree-images-of-winter-and-white-background-wallpapers-free-download-image_2935697.jpg",
+                R.drawable.hills_rum_new,
             ),
 
             Card("Новогодняя вечеринка в Hills Lounge | Солнцево",
                 "Мы работаем для Вас с 20:00 и до утра!",
-                "https://img1.akspic.ru/previews/5/3/0/9/7/179035/179035-voda-gora-gidroresursy-rastenie-oblako-550x310.jpg",
+                R.drawable.hills_sol_new,
             )
         )
 
@@ -77,11 +77,11 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun logout() {
-        val sharedPreferences = getApplication<Application>().getSharedPreferences(
-            "user_prefs",
-            Context.MODE_PRIVATE
-        )
-        sharedPreferences.edit().clear().apply()
-    }
+//    fun logout() {
+//        val sharedPreferences = getApplication<Application>().getSharedPreferences(
+//            "user_prefs",
+//            Context.MODE_PRIVATE
+//        )
+//        sharedPreferences.edit().clear().apply()
+//    }
 }

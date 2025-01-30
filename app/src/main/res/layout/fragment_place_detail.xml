@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/background_variant"
+            android:elevation="4dp">
+
+            <!-- Верхний блок с заголовком и кнопкой закрытия -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/placeDetailsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textSize="24sp"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    tools:text="Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/closeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/image_buttons_border"
+                    android:src="@drawable/close"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Изображение места -->
+            <ImageView
+                android:id="@+id/placeDetailsImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                tools:src="@drawable/wfcubjudis72rza2fjhpywblwwu7rtso"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_image"
+                android:clipToOutline="true"/>
+
+            <!-- Описание -->
+            <TextView
+                android:id="@+id/placeDetailsDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="20sp"
+                android:textColor="@color/accentColor"
+                android:textStyle="normal"
+                tools:text="Description text" />
+
+            <!-- Адрес -->
+            <TextView
+                android:id="@+id/placeDetailsAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                tools:text="Address is here"
+                />
+
+            <FrameLayout
+                android:id="@+id/placeDetail_frame_map"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                >
+
+                <!-- Карта -->
+                <com.yandex.mapkit.mapview.MapView
+                    android:id="@+id/placeDetailMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/accentColor"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end"
+                        android:padding="8dp"
+                        >
+
+                        <Button
+                            android:id="@+id/zoomInButton"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:text="\u002B"
+                            android:backgroundTint="@color/background_variant"
+                            android:textSize="26sp"
+                            android:fontFamily="sans-serif"
+                            android:padding="8dp"
+                            android:textColor="#FFFFFF"
+                            />
+
+                        <Button
+                            android:id="@+id/zoomOutButton"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:text="\u2212"
+                            android:backgroundTint="@color/background_variant"
+                            android:textSize="26sp"
+                            android:fontFamily="sans-serif"
+                            android:padding="8dp"
+                            android:textColor="#FFFFFF"
+                            />
+
+                    </LinearLayout>
+
+                </com.yandex.mapkit.mapview.MapView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/book_table_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/imbut_background"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/free_icon_reservation_4464977"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Забронировать стол"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/imbut_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/free_icon_restaurant_1919608"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Меню"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/call_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/imbut_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/free_icon_phone_call_455604"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Позвонить в заведение"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/text_telegram_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="clip_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/imbut_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/free_icon_telegram_739260"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Написать в Telegram"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Услуги"
+                android:textSize="24sp"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/placeDetail_rv_services"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                tools:listitem="@layout/places_detail_rv_services_item"
+                />
+
+            <TextView
+                android:id="@+id/placeDetailsWorkingHoursTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="24sp"
+                android:text="Часы работы:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/placeDetailsWorkingHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
+
+

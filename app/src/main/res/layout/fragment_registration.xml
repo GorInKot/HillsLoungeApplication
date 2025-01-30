@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground">
+    android:background="@color/background_variant">
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -11,14 +11,14 @@
         android:layout_height="wrap_content"
         android:text="@string/registrationTitle"
         android:textSize="24sp"
-        android:textColor="?attr/colorOnBackground"
+        android:textColor="@color/textColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"
         />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -27,6 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/mainColor"
         />
 
 
@@ -37,8 +39,8 @@
         android:hint="Введите имя"
         android:inputType="text"
         android:textSize="22sp"
-        android:textColor="?attr/colorOnSurface"
-        android:textColorHint="?attr/colorOnSurface"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
@@ -54,8 +56,8 @@
         android:hint="Введите Ваш email"
         android:inputType="text"
         android:textSize="22sp"
-        android:textColor="?attr/colorOnSurface"
-        android:textColorHint="?attr/colorOnSurface"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextName"
@@ -71,8 +73,8 @@
         android:hint="@string/enterNumberHint"
         android:inputType="phone"
         android:textSize="22sp"
-        android:textColor="?attr/colorOnSurface"
-        android:textColorHint="?attr/colorOnSurface"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
@@ -88,8 +90,8 @@
         android:hint="@string/enterPasswordHint"
         android:inputType="textPassword"
         android:textSize="22sp"
-        android:textColor="?attr/colorOnSurface"
-        android:textColorHint="?attr/colorOnSurface"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextNumber"
@@ -105,8 +107,8 @@
         android:hint="@string/enterPasswordHint"
         android:inputType="textPassword"
         android:textSize="22sp"
-        android:textColor="?attr/colorOnSurface"
-        android:textColorHint="?attr/colorOnSurface"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
@@ -133,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Есть аккаунт? Войти"
-        android:textColor="?attr/colorOnSurface"
+        android:textColor="@color/accentColor"
         android:textSize="22sp"
         android:textStyle="normal"
         android:textAllCaps="false"

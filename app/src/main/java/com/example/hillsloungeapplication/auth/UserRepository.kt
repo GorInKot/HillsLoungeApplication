@@ -1,6 +1,5 @@
 package com.example.hillsloungeapplication.auth
 
-import android.service.autofill.UserData
 import com.example.hillsloungeapplication.auth.registration.database.UserProfile
 import com.google.firebase.database.FirebaseDatabase
 

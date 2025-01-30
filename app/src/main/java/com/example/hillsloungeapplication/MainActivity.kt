@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -39,15 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
-//        binding.bottomNavigationView.itemIconTintList = ContextCompat
-//            .getColorStateList(this, R.color.selector_icon)
-//
-//        binding.bottomNavigationView.itemTextColor = ContextCompat
-//            .getColorStateList(this, R.color.selector_text)
     }
-
-
 
     fun hideBottomNavigation() {
         binding.bottomNavigationView.visibility = View.GONE
@@ -79,16 +72,5 @@ class MainActivity : AppCompatActivity() {
         showBottomNavigation() // Показываем BottomNavigationView после авторизации
     }
 
-    override fun onStart() {
-        super.onStart()
-//        MapKitFactory.getInstance().onStart()
-//        mapView.onStart()
-    }
-
-    override fun onStop() {
-//        mapView.onStop()
-//        MapKitFactory.getInstance().onStop()
-        super.onStop()
-    }
 }
 

@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="3dp"
-    android:layout_marginEnd="3dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home.HomeFragment"
-    android:background="?android:attr/colorBackground">
+    android:background="@color/background_variant">
 
     <LinearLayout
         android:id="@+id/some_linear_layout"
@@ -25,27 +23,17 @@
             android:id="@+id/fragment_home_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?attr/colorOnBackground"
-            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            android:text="@string/main_fragment_title"
             android:textStyle="bold"
             android:textSize="28sp"
+            android:textAllCaps="false"
             android:textAlignment="textStart"
-            android:text="@string/main_fragment_title"
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_weight="1"
-            />
-
-        <ImageButton
-            android:id="@+id/fragment_home_imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/exit"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="?android:attr/colorBackground"
             />
 
     </LinearLayout>
@@ -73,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hills_lounge_loyalty"
                 android:textSize="26sp"
-                android:textColor="?attr/colorSurface"
+                android:textColor="@color/textColor"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home_title"/>
 
             <TextView
@@ -81,16 +69,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Твои баллы: 100"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="24sp"/>
+                android:textColor="@color/accentColor"
+                android:textSize="24sp"
+                android:layout_marginTop="5dp"
+                />
 
             <TextView
                 android:id="@+id/fragment_home_tv_cashback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10% CASHBACK"
-                android:textColor="?attr/colorPrimaryVariant"
-                android:textSize="20sp"/>
+                android:textColor="@color/mainColor"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -98,19 +90,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:src="@drawable/create_me_a_logo_for_a_place_called_hills_lounge_logo_1ee78d9e"
                 android:layout_gravity="center"
-                android:background="?attr/colorSurface"/>
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/mainColor"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0 любимых заведений"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="16sp"/>
+                android:textColor="@color/mainColor"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"/>
 
         </LinearLayout>
 
@@ -120,10 +114,10 @@
         android:id="@+id/fragment_home_title_news"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="?attr/colorOnBackground"
+        android:textColor="@color/textColor"
         android:textAllCaps="false"
         android:textStyle="bold"
-        android:textSize="28sp"
+        android:textSize="26sp"
         android:textAlignment="textStart"
         android:text="Лента новостей"
         app:layout_constraintTop_toBottomOf="@+id/layout_box_horizontal"
@@ -136,8 +130,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeFragment_small_rv"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -145,33 +139,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/diviver"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_home_title_news"
-        android:background="?attr/colorPrimaryVariant"/>
+        app:layout_constraintTop_toBottomOf="@+id/fragment_home_title_news" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/diviver"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:dividerColor="?attr/colorPrimaryVariant"
+        app:dividerColor="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeFragment_small_rv"
-        android:layout_margin="15dp" />
+        android:layout_margin="12dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeFragment_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/home_recyclerview_item"
+        tools:listitem="@layout/home_fragment_big_rv_item"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/diviver"
-        android:background="?attr/colorSurface"/>
+        android:clipToPadding="false"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
