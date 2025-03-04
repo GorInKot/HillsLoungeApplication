@@ -17,9 +17,16 @@
     <color name="luxury_light_text_secondary">#1C1C1C</color>
 <!--    <color name="luxury_light_text_secondary">#1C1C1C</color>-->
 
+<!--    <color name="background">#000000</color>-->
+<!--    <color name="background_variant">#242424</color>-->
+<!--    <color name="background_variant_alter">#353535</color>-->
+<!--    <color name="textColor">#FFFFFF</color>-->
+<!--    <color name="mainColor">#D4A373</color>-->
+<!--    <color name="accentColor">#1E8E63</color>-->
+
     <color name="background">#000000</color>
-    <color name="background_variant">#242424</color>
-    <color name="background_variant_alter">#353535</color>
+    <color name="background_variant">#000000</color>
+    <color name="background_variant_alter">#242424</color>
     <color name="textColor">#FFFFFF</color>
     <color name="mainColor">#D4A373</color>
     <color name="accentColor">#1E8E63</color>

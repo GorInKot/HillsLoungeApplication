@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.HillsLoungeApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_background</item>
+<!--        <item name="android:windowBackground">@drawable/splash_background</item>-->
         <!-- Фон приложения -->
         <item name="background">@color/background_variant</item>
 
@@ -24,9 +24,6 @@
     </style>
 
     <!-- Стиль для заставки (Splash Screen) -->
-    <style name="Theme.HillsLoungeApplication.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_background</item>
-
-    </style>
+    <style name="Theme.HillsLoungeApplication.Splash" parent="Theme.MaterialComponents.Light.NoActionBar"></style>
 
 </resources>

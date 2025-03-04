@@ -27,7 +27,7 @@ class PlacesViewModel : ViewModel() {
             Place(
                 "Hills Lounge | Румянцево",
                 "Россия, Москва, ул. Родниковая, д. 9А, к.2",
-                R.drawable.hills_rum_new,
+                R.drawable.hills_rumyantsevo,
                 "Мы работаем до 01:00!",
                 55.63390917549483,
                 37.41457944422558,

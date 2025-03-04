@@ -155,7 +155,7 @@
             <View
                 android:id="@+id/profileFragment_achiveBox"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:background="@color/accentColor"
                 app:layout_constraintTop_toBottomOf="@id/tvAchive"
                 app:layout_constraintStart_toStartOf="parent"

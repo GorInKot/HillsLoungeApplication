@@ -1,7 +1,6 @@
 package com.example.hillsloungeapplication.Home
 
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -34,7 +33,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
             Card("Новогодняя вечеринка в Hills Lounge | Румянцево",
                 "Мы работаем для Вас с 20:00 и до утра!",
-                R.drawable.hills_rum_new,
+                R.drawable.hills_rumyantsevo,
             ),
 
             Card("Новогодняя вечеринка в Hills Lounge | Солнцево",

@@ -48,6 +48,8 @@ android {
 
 dependencies {
 
+    implementation("com.google.firebase:firebase-messaging-ktx:24.1.0")
+
     implementation("com.google.android.material:material:1.12.0")
     //splashScreen
     implementation("androidx.core:core-splashscreen:1.0.1")
@@ -56,6 +58,8 @@ dependencies {
     implementation("jp.wasabeef:glide-transformations:4.3.0")
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(libs.firebase.messaging)
+    implementation(libs.firebase.firestore.ktx)
 
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1") // Для генерации кода Glide
 

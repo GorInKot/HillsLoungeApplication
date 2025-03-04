@@ -36,6 +36,8 @@
     <string name="enterNumberHint">Введите номер телефона</string>
     <string name="enterNameHint">Введите Ваше имя</string>
     <string name="registrationTitle">Регистрация</string>
+    <string name="fcm_message">Test string</string>
+    <string name="default_notification_channel_id">default notification channel id</string>
 
     <string-array name="cat_names">
         <item>Рыжик</item>

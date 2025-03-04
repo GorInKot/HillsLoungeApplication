@@ -4,15 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.example.hillsloungeapplication.MainActivity
 import com.example.hillsloungeapplication.R
 import com.example.hillsloungeapplication.auth.registration.RegistrationFragment
+import com.example.hillsloungeapplication.auth.resetPassword.ResetPasswordFragment
 import com.example.hillsloungeapplication.databinding.FragmentSignInBinding
 
-class SignInFragment : Fragment() {
+class SignInFragment : androidx.fragment.app.Fragment() {
 
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
@@ -40,6 +43,21 @@ class SignInFragment : Fragment() {
                 .replace(R.id.frame_layout, RegistrationFragment())
                 .addToBackStack(null)
                 .commit()
+        }
+
+        binding.textViewResetPassword.setOnClickListener {
+            Toast.makeText(activity, "Скоро тут что-то будет", Toast.LENGTH_LONG).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, ResetPasswordFragment())
+                .addToBackStack(null)
+                .commit()
+//        // TODO: открывается новый фрагмент с EditText, где пользователь вводит либо почту, либо номер телефона, указанные при регистрации
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.frame_layout, ResetPasswordFragment())
+//                .addToBackStack(null)
+//                .commit()
+//
+//
         }
 
         // Обработка нажатия кнопки авторизации
